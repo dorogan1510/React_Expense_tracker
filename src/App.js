@@ -1,7 +1,7 @@
 import React from 'react'
 import Expenses from './components/Expenses/Expenses'
 import './App.scss'
-import ExpenseForm from './components/CreateNewExpenses/ExpenseForm'
+import NewExpense from './components/CreateNewExpenses/NewExpense'
 
 const expenses = [
     {
@@ -28,8 +28,8 @@ const expenses = [
 function App() {
     return (
         <div className='App'>
+            <NewExpense />
             <Expenses item={expenses} />
-            <ExpenseForm />
         </div>
     )
 }
