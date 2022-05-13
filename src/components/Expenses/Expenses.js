@@ -1,15 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ExpenseItem from './ExpenseItem'
 import './Expenses.scss'
 import ExpensesFilter from './ExpensesFilter'
 
 function Expenses(props) {
+    const [filteredMonth, setFilteredMonth] = useState('0')
+    const filterChangeHandler = selectedMonth => {
+        setFilteredMonth(selectedMonth)
+    }
+
+    const filterExpenses = props.item.filter(expense => {
+        return expense.date.getMonth().toString() === filteredMonth
+    })
+
     return (
         <div>
-            <ExpensesFilter />
+            <ExpensesFilter
+                selected={filteredMonth}
+                onChangeFilter={filterChangeHandler}
+            />
 
             <div className='expenses'>
-                {props.item.map(expense => (
+                {filterExpenses.map(expense => (
                     <ExpenseItem
                         key={expense.id}
                         title={expense.title}
