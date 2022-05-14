@@ -23,6 +23,9 @@ function ExpensesFilter(props) {
                     <option value='10'>November</option>
                     <option value='11'>December</option>
                 </select>
+                <button type='button' onClick={props.onCancelFilter}>
+                    Cancel
+                </button>
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ import ExpenseItem from './ExpenseItem'
 
 const NoExpensesFound = props => {
     if (props.item.length === 0) {
-        return <h2 className='expenses-list__fallback'>No expenses</h2>
+        return <h2 className='expenses-list__fallback'>No expense</h2>
     }
 
     return (
