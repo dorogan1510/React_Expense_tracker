@@ -14,7 +14,10 @@ function Expenses(props) {
         setIsFiltered(true)
     }
 
-    const [filteredMonth, setFilteredMonth] = useState('0')
+    // set current month
+    const [filteredMonth, setFilteredMonth] = useState(new Date().getMonth())
+    //
+
     const filterChangeHandler = selectedMonth => {
         setFilteredMonth(selectedMonth)
     }
@@ -25,9 +28,11 @@ function Expenses(props) {
     })
     //
 
+    // No filter operation
     const noFilterExpenses = props.item.filter(expense => {
         return expense.date.getMonth().toString() | filteredMonth
     })
+    //
 
     return (
         <div className='expenses'>
