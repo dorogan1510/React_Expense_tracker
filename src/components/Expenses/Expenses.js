@@ -39,7 +39,7 @@ function Expenses(props) {
             {isfiltered && (
                 <div>
                     <button
-                        className='expenses__filterButton'
+                        className='expenses'
                         type='button'
                         onClick={startFilterHandler}
                     >

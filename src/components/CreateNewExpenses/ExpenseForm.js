@@ -14,10 +14,13 @@ function ExpenseForm(props) {
         event.preventDefault()
 
         const expenseData = {
+            id: Math.random().toString(),
             title: enteredTitle,
             amount: enteredAmount,
             date: new Date(enteredDate),
         }
+
+        console.log(expenseData)
 
         props.onSaveExpenseData(expenseData)
 
