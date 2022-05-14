@@ -38,7 +38,11 @@ function Expenses(props) {
         <div className='expenses'>
             {isfiltered && (
                 <div>
-                    <button type='button' onClick={startFilterHandler}>
+                    <button
+                        className='expenses__filterButton'
+                        type='button'
+                        onClick={startFilterHandler}
+                    >
                         Filter
                     </button>
                     <NoExpensesFound item={noFilterExpenses} />

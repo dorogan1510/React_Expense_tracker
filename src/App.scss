@@ -1,4 +1,7 @@
 .App {
     max-width: 900px;
     margin: 0 auto;
+    background-color: rgb(31, 31, 31);
+    border-radius: 20px;
+    backdrop-filter: blur(100px);
 }
